@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuidelineBegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuidelineBegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.19" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuidelineEnd2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="com.example.chapter2.NumbersGameFragment"
+        android:layout_width="284dp"
+        android:layout_height="241dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuidelineEnd2"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuidelineEnd"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuidelineBegin"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineBegin"
+        app:layout_constraintVertical_bias="0.221"
+        tools:layout="@layout/fragment_numbers_game" />
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuidelineBegin"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuidelineEnd"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuidelineBegin"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineEnd"
+        app:layout_constraintVertical_bias="0.631" />
+
+    <Button
+        android:id="@+id/settingsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuidelineBegin"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuidelineEnd"
+        app:layout_constraintHorizontal_bias="0.986"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuidelineBegin"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuidelineEnd"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/timerLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalGuidelineEnd2"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuidelineEnd"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuidelineBegin"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView2"
+        app:layout_constraintVertical_bias="0.047" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
